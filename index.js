@@ -2,14 +2,18 @@ import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import authRoutes from './routes/auth.js'
+import studentRoutes from './routes/students.js'
+import cookieParser from "cookie-parser";
 import cors from 'cors'
 
  const app = express()
 dotenv.config()
 app.use(cors())
 app.use(express.json())
-
+app.use(cookieParser())
 app.use("/api/auth", authRoutes)
+app.use("/api/students", studentRoutes)
+
 app.use((err, req, res, next) => {
     const status = err.status || 500;
     const message = err.message || "Something went wrong";
