@@ -6,5 +6,6 @@ const studentSchema = mongoose.Schema({
     mobile:{ type: String, required: true },
     studentId:{ type: Number, unique: true, required: true },
     password:{ type: String, required: true },
+    teacher: {type:Boolean, default: false}
 }, {timestamps: true})
 export default mongoose.model('Student', studentSchema)
