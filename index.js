@@ -4,6 +4,10 @@ import mongoose from 'mongoose'
 import authRoutes from './routes/auth.js'
 import studentRoutes from './routes/students.js'
 import timetableRoutes from './routes/timetable.js'
+import eventRoutes from './routes/events.js'
+import AttendanceRoutes from './routes/attendance.js'
+
+
 
 import cookieParser from "cookie-parser";
 import cors from 'cors'
@@ -16,6 +20,9 @@ app.use(cookieParser())
 app.use("/api/auth", authRoutes)
 app.use("/api/students", studentRoutes)
 app.use("/api/timetable", timetableRoutes)
+app.use("/api/events", eventRoutes)
+app.use("/api/attendance", AttendanceRoutes)
+
 
 
 app.use((err, req, res, next) => {
