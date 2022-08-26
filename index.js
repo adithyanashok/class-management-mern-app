@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import authRoutes from './routes/auth.js'
 import studentRoutes from './routes/students.js'
+import timetableRoutes from './routes/timetable.js'
+
 import cookieParser from "cookie-parser";
 import cors from 'cors'
 
@@ -13,6 +15,8 @@ app.use(express.json())
 app.use(cookieParser())
 app.use("/api/auth", authRoutes)
 app.use("/api/students", studentRoutes)
+app.use("/api/timetable", timetableRoutes)
+
 
 app.use((err, req, res, next) => {
     const status = err.status || 500;
