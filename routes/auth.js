@@ -1,9 +1,9 @@
 import express from "express";
 import { createStudent, studentLogin } from "../controllers/auth.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/createstudent', createStudent)
-router.post('/studentlogin', studentLogin)
+router.post("/createstudent", createStudent);
+router.post("/studentlogin", studentLogin);
 
-export default router
+export default router;

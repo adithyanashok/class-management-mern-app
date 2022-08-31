@@ -1,14 +1,20 @@
 import express from "express";
-import { createAttendance, deleteAttendance, getAttendance, updateAttendance } from "../controllers/attendance.js";
+import {
+  createAttendance,
+  deleteAttendance,
+  getAttendance,
+  updateAttendance,
+} from "../controllers/attendance.js";
+import { verifyTeacher, verifyToken } from "../verifytoken.js";
 
-const router = express.Router()
+const router = express.Router();
 // create Attendance
-router.post('/', createAttendance)
+router.post("/", verifyToken, createAttendance);
 // update Attendance
-router.put('/:id', updateAttendance)
+router.put("/:id", verifyToken, updateAttendance);
 // Delete Attendance
-router.delete('/:id', deleteAttendance)
+router.delete("/:id", verifyTeacher, deleteAttendance);
 // get Attendance
-router.get('/', getAttendance)
+router.get("/", verifyToken, getAttendance);
 
-export default router
+export default router;

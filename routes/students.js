@@ -1,15 +1,17 @@
 import express from "express";
-import { deleteStudent, getStudent, updateStudent } from "../controllers/students.js";
+import {
+  deleteStudent,
+  getStudent,
+  updateStudent,
+} from "../controllers/students.js";
 import { verifyTeacher } from "../verifytoken.js";
 
-const router = express.Router()
+const router = express.Router();
 // update a student
-router.put('/:id', verifyTeacher, updateStudent)
+router.put("/:id", verifyTeacher, updateStudent);
 // Delete a student
-router.delete('/:id', deleteStudent)
+router.delete("/:id", verifyTeacher, deleteStudent);
 // get a user
-router.get('/find/:id', getStudent)
+router.get("/", getStudent);
 
-
-
-export default router
+export default router;
