@@ -6,7 +6,7 @@ import {
   getNotes,
   updateNote,
 } from "../controllers/notes.js";
-import { verifyTeacher } from "../verifytoken";
+import { verifyTeacher } from "../verifytoken.js";
 
 const router = express.Router();
 // create Notes

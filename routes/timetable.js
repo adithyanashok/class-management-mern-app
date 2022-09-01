@@ -6,7 +6,7 @@ import {
   getTimetable,
   updateTimetable,
 } from "../controllers/timetable.js";
-import { verifyTeacher } from "../verifytoken";
+import { verifyTeacher } from "../verifytoken.js";
 
 const router = express.Router();
 
