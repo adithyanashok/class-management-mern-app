@@ -16,7 +16,6 @@ const app = express();
 dotenv.config();
 app.use(
   cors({
-    origin: "http://localhost:3000",
     credentials: true,
   })
 );
@@ -46,7 +45,7 @@ const connect = () => {
   });
 };
 
-app.listen(8800, () => {
-  console.log("Server Connected");
+app.listen(process.env.PORT || '8800', () => {
+  console.log("Server Connected" );
   connect();
 });
