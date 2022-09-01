@@ -1,6 +1,6 @@
 import express from "express";
 import { createAnnouncement, deleteAnnouncement, getAnnouncement, updateAnnouncement } from "../controllers/Announcement.js";
-import { verifyTeacher, verifyToken } from "./../verifytoken.js";
+import { verifyTeacher, verifyToken } from "../verifytoken";
 
 const router = express.Router()
 // create Announcement
