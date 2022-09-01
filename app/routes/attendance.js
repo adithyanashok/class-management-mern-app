@@ -5,7 +5,7 @@ import {
   getAttendance,
   updateAttendance,
 } from "../controllers/attendance.js";
-import { verifyTeacher, verifyToken } from "../verifytoken.js";
+import { verifyTeacher, verifyToken } from "./../verifytoken.js";
 
 const router = express.Router();
 // create Attendance

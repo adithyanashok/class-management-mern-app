@@ -4,7 +4,7 @@ import {
   getStudent,
   updateStudent,
 } from "../controllers/students.js";
-import { verifyTeacher } from "../verifytoken.js";
+import { verifyTeacher } from "./../verifytoken.js";
 
 const router = express.Router();
 // update a student

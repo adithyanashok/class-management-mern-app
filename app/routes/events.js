@@ -6,7 +6,7 @@ import {
   getEvents,
   updateEvent,
 } from "../controllers/events.js";
-import { verifyTeacher } from "../verifytoken.js";
+import { verifyTeacher } from "./../verifytoken.js";
 
 const router = express.Router();
 // create Event
